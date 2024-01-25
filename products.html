@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce - Products</title>
+    <style>
+        body {
+            background-color: #161616f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-repeat: no-repeat;
+            object-fit: cover;
+            height: 200px;
+            padding: 15px 0;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        header h1 {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #424769;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a.active, nav a:hover {
+            color: #5a595b;
+        }
+        .header-img {
+            width: 100%;
+            height: 100%;
+            opacity: 50%;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            background-color: #2a2a2a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 300px;
+            box-sizing: border-box;
+            transform: translateY(0);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .product button {
+            background-color: #242424;
+            color: #b2afaf;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #989898;
+            color:white;
+        }
+
+        .product-description {
+            color: white;
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .product:hover .product-description {
+            display: block;
+            opacity: 1;
+        }
+        h2{
+            color: white;
+        }
+
+        @media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produk Kami</h1>
+        <img class="header-img" src="/media/backround.jpg" alt="foto">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html" onclick="setActiveNavLink(this); return false;">Tentang Kami</a>
+        <a href="#" onclick="setActiveNavLink(this); return false;">Produk</a>
+        <a href="contacts.html" onclick="setActiveNavLink(this); return false;">Kontak</a>
+    </nav>
+    
+    
+    <div class="container">
+        <div class="product">
+            <img src="/media/gorgaboots.png" alt="Product 1">
+            <h2>Gorga Boots</h2>
+            <p class="product-description">"Seri sepatu yang lebih maskulin, design yang terinspirasi dari model sepatu klasik chukka boots"</p>
+
+        </div>
+
+        <div class="product">
+            <img src="/media/borneobold.png" alt="Product 2">
+            <h2>Borneo Bold</h2>
+            <p class="product-description">"Seri sepatu yang lebih versatile, design yang terinspirasi dari model sepatu sneakers tahun 80an"</p>
+
+        </div>
+
+        <div class="product">
+            <img src="/media/parangwhitegum.png" alt="Product 3">
+            <h2>Parang White Gum</h2>
+            <p class="product-description">"Seri sepatu yang lebih kasual namun tetap terkesan kharismatik. Terinspirasi dari model sepatu Wingtip"</p>
+        </div>
+    </div>
+</body>
+</html>

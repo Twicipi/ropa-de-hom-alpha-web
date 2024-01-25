@@ -1,0 +1,283 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My E-Commerce Website</title>
+        <style>
+        body {
+            background-color: #161616f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+            flex-direction: column;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        header {
+            height: 200px;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #424769;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #5a595b;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            height: 90%;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+        }
+
+        .fade {
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            0%,
+            100% {
+            opacity: 0;
+            }
+
+            20%,
+            80% {
+            opacity: 1;
+            }
+        }
+
+        .about-footwear-series {
+            background-image: url("/media/backround.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+            max-width: 100%;
+            height: 500px;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center; /* Tambahkan baris ini */
+            text-align: center; /* Tambahkan baris ini */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .text-description {
+            text-align: center;
+            margin-top:62%;
+            font-size: 1.8em;
+            color: white;
+            background-repeat: no-repeat;
+            background-color: rgba(36, 36, 36, 0.425);
+            backdrop-filter: blur(4px); /* Menambahkan efek blur */
+            filter: blur(0);
+            z-index: -1;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #fff4f4;
+            margin-top: 5%;
+            margin-bottom: 2%;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 5%;
+        }
+
+        .description {
+            font-size: 1.1em;
+            color: #ffffff;
+            max-width: 1200px;
+            margin-top: 10%;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-color: rgba(36, 36, 36, 0.425);
+            backdrop-filter: blur(5px); /* Menambahkan efek blur */
+            filter: blur(0);
+            border-radius: 5px;
+            z-index: -1;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .container {
+            height: auto;
+            width: 340px;
+            justify-content: center;
+            }
+
+            .subtitle{
+                background-color: rgba(36, 36, 36, 0.213);
+            backdrop-filter: blur(4px); /* Menambahkan efek blur */
+            filter: blur(0);
+            }
+
+            .about-footwear-series {
+            height: auto;
+            justify-content: flex-start;
+            }
+            
+            .title{
+                text-align: start;
+            }
+
+            .text-description {
+            margin-top: 55%;
+            font-size: 1.2em;
+            text-align: center;
+            }
+
+            .mySlides {
+            height: auto;
+            }
+
+            .description {
+            font-size: 1em;
+            margin-top: 2%;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            object-fit: cover;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+        <h1>Ropa de Hombre</h1>
+        <img src="/media/backround.jpg" alt="" />
+        </header>
+
+        <nav>
+        <a href="index.html" onclick="setActiveNavLink(this); return false;"
+            >Home</a
+        >
+        <a href="aboutus.html" onclick="setActiveNavLink(this); return false;"
+            >Tentang Kami</a
+        >
+        <a href="products.html" onclick="setActiveNavLink(this); return false;"
+            >Produk</a
+        >
+        <a href="contacts.html" onclick="setActiveNavLink(this); return false;"
+            >Kontak</a
+        >
+        </nav>
+        <main>
+            <div class="container">
+                <div
+                class="about-footwear-series"
+                style="background-image: url('/media/backround.jpg')"
+                >
+                <h1 class="title">ROPA DE HOMBRE</h1>
+                <h2 class="subtitle">FOOTWEAR SERIES</h2>
+                <p class="description">
+                    100% hasil Sepatu Handmade dari pengrajin lokal yang mengusung nilai
+                    kultural, klasik, serta kasual. Menawarkan sepatu dengan harga yang
+                    terjangkau serta kualitas terbaik di kelas harganya.
+                </p>
+                </div>
+                <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="/media/asdasda.png" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="/media/asdsadsadasd.png" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="/media/gorgabootsslideshow.png"/>
+                </div>
+                <p class="text-description">
+                    Seri sepatu kulit namun tetap terkesan kasual, sehingga bisa digunakan
+                    dalam berbagai acara.
+                </p>
+                </div>
+            </div>
+        </main>
+
+        <script>
+        function showProducts() {
+            var productContainer = document.querySelector(".container");
+            if (getComputedStyle(productContainer).opacity === "1") {
+            productContainer.style.display = "flex";
+            }
+        }
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+            slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change slide every 10 seconds
+        }
+        </script>
+    </body>
+    </html>
